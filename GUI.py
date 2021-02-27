@@ -74,7 +74,6 @@ while True:
         except ValueError:
             window['-OUT_VAL-'].update("Input a number to convert")
 
-            #print(f'converting {inputVal} from {convertFrom} to {convertTo}')
     if event == 'Length':
         change_converter(length_str, 'Length')
     if event == 'Area':
@@ -87,7 +86,7 @@ while True:
         change_converter(time_str, 'Time')
     if event == 'Speed':
         change_converter(speed_str, 'Speed')
-        
+
     
 window.close()
 
