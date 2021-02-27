@@ -42,9 +42,6 @@ def change_converter(list, header):
 # ---------------------------------------------------------------------------- #
 
 # ----------------------------- Window Definition ---------------------------- #
-col = [[sg.Input(key='-IN_VAL-', size=box_size, justification='r'), sg.Text('Input a number to convert', key='-OUT_VAL-', size=box_size, justification='c')],
-       [sg.Combo(length_str, key='-UNIT_IN-', size=drop_size, enable_events=True), sg.Combo(length_str, key='-UNIT_OUT-', size=drop_size, enable_events=True)]]
-
 layout = [[sg.Text('Length Conversion', key='-HEADER-', size=(40,0), justification='c', font=('Franklin Gothic Book', 14, 'bold'))],
           [sg.HorizontalSeparator()],
           [sg.Input(key='-IN_VAL-', size=(22,1), justification='c', border_width=0), sg.Text('Input a number to convert', key='-OUT_VAL-', size=box_size, justification='c')],
@@ -57,7 +54,6 @@ layout = [[sg.Text('Length Conversion', key='-HEADER-', size=(40,0), justificati
 window = sg.Window('Unit Converter App', layout, grab_anywhere=True, element_justification='c', element_padding=(10,10), font=('Franklin Gothic Book', 12))
 
 # ---------------------------------------------------------------------------- #
- 
 while True:
     event, values = window.read()
     if event in (None, 'Close', sg.WIN_CLOSED):
@@ -87,9 +83,5 @@ while True:
     if event == 'Speed':
         change_converter(speed_str, 'Speed')
 
-    
 window.close()
-
-
-
 exit()
